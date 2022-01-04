@@ -3095,9 +3095,9 @@ void Temperature::tick() {
       const bool heating = isHeatingHotend(e);
       ui.status_printf_P(0,
         #if HAS_MULTI_HOTEND
-          PSTR("E%c " S_FMT), '1' + e
+          PSTR("Ex%c " S_FMT), '1' + e
         #else
-          PSTR("E " S_FMT)
+          PSTR("Extruder " S_FMT)
         #endif
         , heating ? GET_TEXT(MSG_HEATING) : GET_TEXT(MSG_COOLING)
       );
